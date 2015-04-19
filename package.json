@@ -1,0 +1,19 @@
+{
+  "name": "firefly-frontend",
+  "version": "0.0.1",
+  "description": "Front-end modules for Firefly SIS including Jade mixins, Angular libs, and base Sass Styles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HanoverPublic/firefly-frontend"
+  },
+  "author": "David Fry",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/HanoverPublic/firefly-frontend/issues"
+  },
+  "homepage": "https://github.com/HanoverPublic/firefly-frontend"
+}

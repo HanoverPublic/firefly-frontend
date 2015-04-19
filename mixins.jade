@@ -1,0 +1,53 @@
+mixin field2(label,help)
+  div.form-group.has-feedback(ng-class="{'has-success': sloForm.className.$valid}")
+    label.control-label
+      | #{label}
+    block
+    span.glyphicon.form-control-feedback(ng-class="{'glyphicon-ok': sloForm.className.$valid}")
+    span.help-block(ng-bind="help.#{help}.tip") 
+
+mixin field(label,help)
+  div.form-group
+    label.control-label
+      | #{label}
+    block
+    span.help-block(ng-bind="help.#{help}.tip") 
+
+
+mixin panelWithAdd(title,link,popover)  
+  div.panel.panel-primary
+    div.panel-heading
+      h3.panel-title
+        | #{title}
+        button.btn.btn-default.pull-right.btn-xs(ui-sref= link)
+          +icon("plus")
+    div.panel-body  
+      block
+
+mixin panel(title,theme)  
+  - theme = theme || 'primary'
+  div.panel(class="panel panel-#{theme}")
+    div.panel-heading
+      h3.panel-title= title
+
+    div.panel-body  
+      block
+
+mixin panelNoTitle(theme)  
+  - theme = theme || 'primary'
+  div.panel(class="panel panel-#{theme}")
+    div.panel-body  
+      block
+        
+mixin icon2(name,cls)
+  span.glyphicon(class="glyphicon-#{name} #{cls}")
+
+mixin icon(name,cls)
+  i.fa(class="fa-#{name} #{cls}")
+
+mixin lookup(model,field)
+  select.form-control(
+    ng-model= model,
+    ng-options="l.value as l.display for l in lookups.#{field}"
+  )  
+
